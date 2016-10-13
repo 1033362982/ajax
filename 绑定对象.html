@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="app">
+	<div ng-controller="myctrl">
+		<!-- <h1>{{superman.name}}</h1>
+		<p>年龄{{superman.age}}</p>
+		<p>成绩{{superman.score}}</p> -->
+		<h1 ng-bind="superman.name"></h1>
+		<p>年龄:<span ng-bind="superman.age"></span></p>
+		<p>成绩:<span ng-bind="superman.score"></span></p>
+		<p>性别:<span ng-bind="superman.sex"></span></p>
+	</div>
+	<script src="script/angular.js"></script>
+	<script>
+		var myapp=angular.module("app",[]);
+		myapp.controller("myctrl",function($scope){
+			$scope.superman={
+				name:"美国队长",
+				age:"99",
+				sex:"male",
+				score:"100"
+			}
+			
+		})
+	</script>
+	
+</body>
+</html>
